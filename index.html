@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fragments. — life is a collection of little moments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><canvas id="petals" aria-hidden="true"></canvas>
+<header class="top">
+  <a class="logo" href="#home">Fragments.<span>🌸</span></a>
+  <nav id="nav">
+    <a href="#home">home</a><a href="#journal">journal</a><a href="#poetry">poetry</a><a href="#about">about</a><a href="#notes">notes</a>
+  </nav>
+  <div class="tools"><button class="srch" id="theme" aria-label="Toggle night mode">☾</button><button class="srch" id="srchBtn" aria-label="Search words and verses">⌕</button></div>
+</header>
+<div class="searchbar" id="searchbar" hidden><input id="q" placeholder="search words or verses… (try peace, hope, strength)" aria-label="Search"></div>
+
+<main>
+<section id="home" class="page">
+  <div class="hero">
+    <div class="copy">
+      <h1>life is a<br>collection of<br><em>little moments.</em></h1>
+      <div class="rule"><i></i>🌸<i></i></div>
+      <p>not every day is good,<br>but there is something good<br>in every day. <span class="heart">♥</span></p>
+      <button class="btn" id="embrace">embrace life ➜</button>
+      <div class="wotd" id="wotd" aria-live="polite"></div>
+    </div>
+    <div class="scene" aria-hidden="true"><div class="sc">
+      <div class="window"><div class="cloud c1"></div><div class="cloud c2"></div><div class="hills"></div></div>
+      <div class="sticky">take it<br>one day<br>at a time ♡</div>
+      <div class="vase">🌷</div>
+      <div class="book"><b>note to self:</b><span>☐ be kind</span><span>☐ be patient</span><span>☐ be proud of how far you've come</span></div>
+      <div class="mug">♡</div>
+      <div class="stack"><span>breathe</span><span>go at your</span><span>own pace</span></div>
+      <div class="puff">◡</div>
+    </div></div>
+  </div>
+<div class="strip card">
+    <button class="orb" id="orb" aria-label="Start a guided breathing exercise"><span id="orbt">tap to breathe</span></button>
+    <div class="sp"><h3>take a minute for you</h3><p>Breathe in for 4, hold for 4, out for 6. Repeat until your shoulders drop.</p>
+    <div class="stats"><div><b id="sE">0</b>journal entries</div><div><b id="sF">0</b>saved verses</div><div><b>56</b>words to carry</div></div></div>
+  </div>
+</section>
+
+<section id="journal" class="page" hidden>
+  <h2>your journal</h2>
+  <p class="sub">Write down whatever is on your heart. Entries are saved only on this device, so only you can read them.</p>
+  <div class="jwrap">
+    <form id="jform" onsubmit="return false">
+      <label>how are you feeling today?</label>
+      <div class="moods" id="moods"></div>
+      <input id="jtitle" maxlength="60" placeholder="title (optional)">
+      <textarea id="jtext" rows="8" placeholder="dear journal…"></textarea><small id="wc" class="wc">0 words</small>
+      <div class="row"><button class="btn" id="jsave">save entry</button><button class="ghost" id="jprompt" type="button">give me a prompt</button><span id="jmsg" role="status"></span></div>
+    </form>
+    <div><div class="row between"><h3>entries (<span id="jcount">0</span>)</h3><button class="ghost" id="jclear">delete all</button></div><div id="jlist"></div></div>
+  </div>
+</section>
+
+<section id="poetry" class="page" hidden>
+  <h2>words to carry</h2>
+  <p class="sub">56 words of encouragement. Tap any word to keep it on your home page.</p>
+  <div class="grid" id="words"></div>
+</section>
+
+<section id="about" class="page" hidden>
+  <h2>about fragments.</h2>
+  <div class="card prose">
+    <p>Fragments. is a quiet corner for the little moments, a place to breathe, write, and rest.</p>
+    <p>This site is not a substitute for professional help. If you feel you can't cope or you are in danger, talk to someone you trust right away. You are not alone. 🤍</p>
+    <p class="small">live gently. dream freely. be you.</p>
+  </div>
+</section>
+
+<section id="notes" class="page" hidden>
+  <h2>notes for the weary heart</h2>
+  <p class="sub">54 Bible verses (KJV) for a tired, anxious, or heavy heart.</p>
+  <div class="row" style="margin-bottom:14px"><button class="ghost" id="favonly" aria-pressed="false">♡ show saved only</button></div>
+  <div class="vfeature card"><p id="vtext"></p><b id="vref"></b><button class="btn" id="vnext">another verse</button></div>
+  <div class="list" id="verses"></div>
+</section>
+</main>
+<footer><div class="torn">live gently.<br>dream freely. &nbsp; be you. ♥</div><div class="soc"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Pinterest">P</a><a href="#" aria-label="Email">✉</a></div></footer>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
